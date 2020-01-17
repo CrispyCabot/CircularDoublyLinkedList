@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyDoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyDoublyLinkedList.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +32,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CircularSinglyLinkedList" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\cjbas\IdeaProjects\DoublyLinkedList\src" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="TestMyDoublyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -51,18 +64,6 @@
         <item itemvalue="Application.TestMyDoublyLinkedList" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -133,8 +134,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/TestMyDoublyLinkedList.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="4" />
+          <line>212</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
