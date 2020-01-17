@@ -4,7 +4,6 @@ import java.util.NoSuchElementException;
 public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
         implements Cloneable {
     private Node<E> head;
-    private int size = 0;
 
     public MyDoublyLinkedList() {
         head = new Node(null);
@@ -103,14 +102,16 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
 
     @Override
     public void add(int index, E e) {
-        Node<E> addedElement = new Node(e);
-        Node<E> current = head;
-        for (int i=0; i<index; i++) { //Advances to one before index
-            current = current.next;
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
         }
-        addedElement.next = current.next;
-        current.next = addedElement;
-        addedElement.previous = current;
+        Node<E> prev = getNode(index-1);
+        Node<E> next = prev.next;
+        Node<E> newNode = new Node(e);
+        prev.next = newNode;
+        next.previous = newNode;
+        newNode.previous = prev;
+        newNode.next = next;
         size++;
     }
 
@@ -124,8 +125,8 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
     @Override
     public boolean contains(E e) {
         Node<E> current = head.next;
-        for (int i=0; i<size; i++) {
-            if (e.equals(current.element))
+        while (current != head) {
+            if (e == null ? current.element == null : e.equals(current.element))
                 return true;
             current = current.next;
         }
@@ -153,7 +154,7 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
     }
 
     @Override
-    public int lastIndexOf(E e) {
+    public int lastIndexOf(E e) { //asdfadf
         int index = -1;
         Node<E> current = head.next;
         for (int i=0; i<size; i++) {
@@ -192,13 +193,8 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
 
     private Node<E> getNode(int index) {
         Node<E> current = head;
-        if (index < size / 2) {
-            for (int i = -1; i < index; i++)
-                current = current.next;
-        } else {
-            for (int i = size; i > index; i--)
-                current = current.previous;
-        }
+        for (int i = -1; i < index; i++)
+            current = current.next;
         return current;
     }
 
