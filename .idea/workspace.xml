@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyDoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyDoublyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestMyDoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestMyDoublyLinkedList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,16 +129,5 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="446" y="306" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1579189466840" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/TestMyDoublyLinkedList.java</url>
-          <line>212</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

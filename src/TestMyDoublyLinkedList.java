@@ -258,7 +258,7 @@ public class TestMyDoublyLinkedList {
 	listIter.add("Kentucky");
 	listIter.next();
 	listIter.set("Ohio");
-
+	System.out.println(list.toString());
 	// [Indiana, Kentucky, Ohio]
 	if (list.size() != 3)
 		throw new RuntimeException();
@@ -317,7 +317,9 @@ public class TestMyDoublyLinkedList {
     	System.out.println("Test 25 successful");
     }
 
+    System.out.println(list.toString());
     list.add(1, null);
+    System.out.println(list.toString());
 
     // [Michigan, null]
     if (list.indexOf("Michigan") != 0 || list.indexOf(null) != 1)
