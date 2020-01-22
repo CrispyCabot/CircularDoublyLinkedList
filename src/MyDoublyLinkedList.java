@@ -2,6 +2,7 @@
 //MyDoublyLinkedList class
 //A circular doubly linked list with a dummy head node
 
+import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
@@ -43,7 +44,7 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
             return false;
         else {
             ListIterator thisIterator = this.listIterator(); //Make an iterator
-            ListIterator newIterator = ((MyDoublyLinkedList)newList).listIterator(); //Make another iterator
+            Iterator newIterator = newList.iterator(); //Make another iterator
             while (thisIterator.hasNext()) { //Since they're the same size, only one loop is needed
                 if (!(thisIterator.next() == newIterator.next())) //Makes sure the .next() is equal
                     return false;
@@ -233,38 +234,24 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
         public E next() { //Goes to next element
             if (!hasNext())
                 throw new NoSuchElementException();
-            //Checks which direction list was traversing
-            //If the last call was previous, the element isn't actually going to change from a call to next
-            if (lastReturned != null && lastReturned.previous == next) {
-                next = lastReturned.next;
-            }
-            else {
-                lastReturned = next;
-                next = next.next;
-            }
+            //Returns the next element changing variables accordingly
+            lastReturned = next;
+            next = next.next;
             nextIndex++;
             return lastReturned.element;
         }
 
         @Override
         public boolean hasPrevious() { //Checks if there is a previous element
-            if (nextIndex < 1)
-                return false;
-            return true;
+            return nextIndex > 0;
         }
 
         @Override
         public E previous() { //Gets previous element
             if (hasPrevious()) {
-                //Checks which direction list was traversing
-                //If the last call was next, the element isn't actually going to change from a call to next
-                if (lastReturned != null && next == lastReturned.next) {
-                    next = lastReturned.previous;
-                }
-                else {
-                    lastReturned = next;
-                    next = next.previous;
-                }
+                //Returns the previous element changing variables accordingly
+                lastReturned = next.previous;
+                next = next.previous;
                 nextIndex--;
                 return lastReturned.element;
             }
