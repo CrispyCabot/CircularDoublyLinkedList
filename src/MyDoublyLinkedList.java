@@ -197,6 +197,8 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
 
     @Override
     public ListIterator<E> listIterator(int index) { //Gets a DoublyLinkedListIterator
+        if (index < 0 || index > size)
+            throw new IndexOutOfBoundsException();
         return new DoublyLinkedListIterator(index);
     }
 
@@ -212,41 +214,36 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
         private int nextIndex;
         private Node<E> lastReturned = null;
 
-        public DoublyLinkedListIterator() { //Default constructor, starts at first element
+        private DoublyLinkedListIterator() { //Default constructor, starts at first element
             next = head.next;
-            nextIndex = -1;
+            nextIndex = 0;
         }
 
-        public DoublyLinkedListIterator(int index) { //Allows creating of iterator mid-list
+        private DoublyLinkedListIterator(int index) { //Allows creating of iterator mid-list
             nextIndex = index;
-            next = head.next;
-            for (int i=0; i<index; i++)
-                next = next.next;
+            next = getNode(index);
         }
 
         @Override
         public boolean hasNext() { //Checks if there is still a next element
-            if (nextIndex >= size)
-                return false;
-            return true;
+            return nextIndex < size;
         }
 
         @Override
         public E next() { //Goes to next element
-            if (hasNext()) {
-                //Checks which direction list was traversing
-                //If the last call was previous, the element isn't actually going to change from a call to next
-                if (lastReturned != null && lastReturned.previous == next) {
-                    next = lastReturned.next;
-                }
-                else {
-                    lastReturned = next;
-                    next = next.next;
-                }
-                nextIndex++;
-                return lastReturned.element;
+            if (!hasNext())
+                throw new NoSuchElementException();
+            //Checks which direction list was traversing
+            //If the last call was previous, the element isn't actually going to change from a call to next
+            if (lastReturned != null && lastReturned.previous == next) {
+                next = lastReturned.next;
             }
-            throw new NoSuchElementException();
+            else {
+                lastReturned = next;
+                next = next.next;
+            }
+            nextIndex++;
+            return lastReturned.element;
         }
 
         @Override
