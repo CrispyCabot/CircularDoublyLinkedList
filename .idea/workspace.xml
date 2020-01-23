@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList$DoublyLinkedListIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList$DoublyLinkedListIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/MyDoublyLinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyDoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyDoublyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

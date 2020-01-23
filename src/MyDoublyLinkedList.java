@@ -274,10 +274,13 @@ public class MyDoublyLinkedList<E> extends MyAbstractSequentialList<E>
                 throw new IllegalStateException();
             size--;
             //Changes pointers around to skip over the current element, then sets lastReturned to null
+            if (next == lastReturned)
+                next = next.next;
+            else
+                nextIndex--;
             lastReturned.previous.next = lastReturned.next;
             lastReturned.next.previous = lastReturned.previous;
             lastReturned = null;
-            nextIndex--;
         }
 
         @Override
